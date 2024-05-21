@@ -7,12 +7,7 @@ import 'custom/custom_note_item.dart';
 
 class NoteListView extends StatelessWidget {
   const NoteListView({super.key});
-  final dataColor = const [
-    Color(0xffFFCC80),
-    Color(0xffE7E896),
-    Color(0xff76D6EE),
-    Color(0xff7C5F80),
-  ];
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<NotesCubit, NotesState>(
@@ -29,7 +24,6 @@ class NoteListView extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 4),
                 child: NoteItem(
                   note: notes[index],
-                  color: dataColor[index % dataColor.length],
                 ),
               );
             },
